@@ -27,7 +27,7 @@ export default function FeaturedEpisode() {
                 <img
                   src={featuredEpisode.image || "/placeholder.svg"}
                   alt={featuredEpisode.title}
-                  className="w-100 h-100 object-cover rounded-lg"
+                  className="w-3/4 h-3/4 object-cover rounded-lg"
                 />
               </div>
             </div>
