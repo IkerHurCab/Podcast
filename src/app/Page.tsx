@@ -6,7 +6,7 @@ import NeuroShortsPreview from "../components/NeuroShorts-Preview";
 
 export default function Page() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen ">
       <Hero />
       <div className="container mx-auto px-4 py-12">
         <FeaturedEpisode />
