@@ -139,7 +139,7 @@ export default function NeuroShortsPage() {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {neuroShorts.slice(0, 6).map((short) => (
-              <div key={short.id} className="flex-shrink-0 w-80 snap-start">
+              <div key={short.id} className="flex-shrink-0 w-80 snap-start hover:scale-102 transition-transform duration-500">
                 <div
                   className={`bg-gradient-to-br ${short.color} rounded-xl p-6 h-64 flex flex-col justify-between text-white relative overflow-hidden group cursor-pointer`}
                   onClick={() => playShort(short)}
@@ -168,16 +168,7 @@ export default function NeuroShortsPage() {
                     </button>
                   </div>
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                      <Play
-                        size={24}
-                        className={`text-${short.color
-                          .split(" ")[1]
-                          .replace("to-", "")}`}
-                      />
-                    </div>
-                  </div>
+
                 </div>
               </div>
             ))}
