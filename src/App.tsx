@@ -4,6 +4,7 @@ import Page from "./app/Page"
 import EpisodesPage from "./app/episodes/Page"
 import ContactPage from "./app/contact/Page"
 import NeuroShortsPage from "./app/neuroshorts/Page"
+import LaboratorioPage from "./app/laboratorio/Page"
 import { AudioProvider } from "./context/AudioContext"
 import "./App.css"
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Page />} />
             <Route path="/episodes" element={<EpisodesPage />} />
             <Route path="/neuroshorts" element={<NeuroShortsPage />} />
+            <Route path="/laboratorio" element={<LaboratorioPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </Layout>

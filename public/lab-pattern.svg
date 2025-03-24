@@ -1,0 +1,87 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="1.5">
+    <!-- Patrones de conexiones cerebrales -->
+    <path d="M100,100 C200,50 300,150 400,100" />
+    <path d="M400,100 C500,50 600,150 700,100" />
+    <path d="M700,100 C800,50 900,150 1000,100" />
+    <path d="M1000,100 C1100,50 1200,150 1300,100" />
+    
+    <path d="M100,200 C200,150 300,250 400,200" />
+    <path d="M400,200 C500,150 600,250 700,200" />
+    <path d="M700,200 C800,150 900,250 1000,200" />
+    <path d="M1000,200 C1100,150 1200,250 1300,200" />
+    
+    <path d="M100,300 C200,250 300,350 400,300" />
+    <path d="M400,300 C500,250 600,350 700,300" />
+    <path d="M700,300 C800,250 900,350 1000,300" />
+    <path d="M1000,300 C1100,250 1200,350 1300,300" />
+    
+    <path d="M100,400 C200,350 300,450 400,400" />
+    <path d="M400,400 C500,350 600,450 700,400" />
+    <path d="M700,400 C800,350 900,450 1000,400" />
+    <path d="M1000,400 C1100,350 1200,450 1300,400" />
+    
+    <path d="M100,500 C200,450 300,550 400,500" />
+    <path d="M400,500 C500,450 600,550 700,500" />
+    <path d="M700,500 C800,450 900,550 1000,500" />
+    <path d="M1000,500 C1100,450 1200,550 1300,500" />
+    
+    <!-- Conexiones verticales -->
+    <path d="M200,50 C250,150 150,250 200,350" />
+    <path d="M400,50 C450,150 350,250 400,350" />
+    <path d="M600,50 C650,150 550,250 600,350" />
+    <path d="M800,50 C850,150 750,250 800,350" />
+    <path d="M1000,50 C1050,150 950,250 1000,350" />
+    <path d="M1200,50 C1250,150 1150,250 1200,350" />
+    
+    <path d="M200,350 C250,450 150,550 200,650" />
+    <path d="M400,350 C450,450 350,550 400,650" />
+    <path d="M600,350 C650,450 550,550 600,650" />
+    <path d="M800,350 C850,450 750,550 800,650" />
+    <path d="M1000,350 C1050,450 950,550 1000,650" />
+    <path d="M1200,350 C1250,450 1150,550 1200,650" />
+    
+    <!-- Nodos (puntos de conexión) -->
+    <circle cx="200" cy="100" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="400" cy="100" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="600" cy="100" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="800" cy="100" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1000" cy="100" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1200" cy="100" r="5" fill="#ffffff" opacity="0.6"/>
+    
+    <circle cx="200" cy="200" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="400" cy="200" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="600" cy="200" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="800" cy="200" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1000" cy="200" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1200" cy="200" r="5" fill="#ffffff" opacity="0.6"/>
+    
+    <circle cx="200" cy="300" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="400" cy="300" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="600" cy="300" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="800" cy="300" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1000" cy="300" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1200" cy="300" r="5" fill="#ffffff" opacity="0.6"/>
+    
+    <circle cx="200" cy="400" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="400" cy="400" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="600" cy="400" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="800" cy="400" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1000" cy="400" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1200" cy="400" r="5" fill="#ffffff" opacity="0.6"/>
+    
+    <circle cx="200" cy="500" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="400" cy="500" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="600" cy="500" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="800" cy="500" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1000" cy="500" r="5" fill="#ffffff" opacity="0.6"/>
+    <circle cx="1200" cy="500" r="5" fill="#ffffff" opacity="0.6"/>
+  </g>
+</svg>
+

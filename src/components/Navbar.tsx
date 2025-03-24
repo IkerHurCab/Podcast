@@ -1,19 +1,22 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Brain, Zap } from "lucide-react";
+"use client"
+
+import { useState } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { Menu, X, Brain, Zap, Dumbbell } from "lucide-react"
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const location = useLocation()
 
   const navItems = [
     { name: "Inicio", path: "/" },
     { name: "Episodios", path: "/episodes" },
-    { name: "NeuroShorts", path: "/neuroshorts" },
+    { name: "NeuroShorts", path: "/neuroshorts", icon: <Zap size={14} className="mr-1 text-indigo-500" /> },
+    { name: "Laboratorio", path: "/laboratorio", icon: <Dumbbell size={14} className="mr-1 text-teal-500" /> },
     { name: "Contacto", path: "/contact" },
-  ];
+  ]
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path
 
   return (
     <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50">
@@ -32,14 +35,10 @@ export default function Navbar() {
                 key={item.path}
                 to={item.path}
                 className={`text-sm font-medium transition-colors hover:text-teal-600 flex items-center ${
-                  isActive(item.path)
-                    ? "text-teal-600"
-                    : "text-slate-500 dark:text-slate-400"
+                  isActive(item.path) ? "text-teal-600" : "text-slate-500 dark:text-slate-400"
                 }`}
               >
-                {item.path === "/neuroshorts" && (
-                  <Zap size={14} className="mr-1 text-indigo-500" />
-                )}
+                {item.icon}
                 {item.name}
               </Link>
             ))}
@@ -71,15 +70,11 @@ export default function Navbar() {
                 key={item.path}
                 to={item.path}
                 className={`block text-sm font-medium transition-colors hover:text-teal-600 ${
-                  isActive(item.path)
-                    ? "text-teal-600"
-                    : "text-slate-500 dark:text-slate-400"
-                } ${item.path === "/neuroshorts" ? "flex items-center" : ""}`}
+                  isActive(item.path) ? "text-teal-600" : "text-slate-500 dark:text-slate-400"
+                } ${item.icon ? "flex items-center" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                {item.path === "/neuroshorts" && (
-                  <Zap size={14} className="mr-1 text-indigo-500" />
-                )}
+                {item.icon}
                 {item.name}
               </Link>
             ))}
@@ -94,5 +89,6 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  );
+  )
 }
+
