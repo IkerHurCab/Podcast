@@ -1,20 +1,19 @@
-"use client"
-
-import { useState } from "react"
-import { Link, useLocation } from "react-router-dom"
-import { Menu, X, Brain } from 'lucide-react'
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Brain, Zap } from "lucide-react";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const location = useLocation()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
     { name: "Inicio", path: "/" },
     { name: "Episodios", path: "/episodes" },
+    { name: "NeuroShorts", path: "/neuroshorts" },
     { name: "Contacto", path: "/contact" },
-  ]
+  ];
 
-  const isActive = (path: string) => location.pathname === path
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50">
@@ -22,19 +21,25 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
             <Brain className="h-8 w-8 text-gradient-to-r from-teal-500 to-cyan-500" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">NeuroSynapse</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">
+              NeuroSynapse
+            </span>
           </Link>
 
-          {/* Desktop navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-teal-600 ${
-                  isActive(item.path) ? "text-teal-600" : "text-slate-500 dark:text-slate-400"
+                className={`text-sm font-medium transition-colors hover:text-teal-600 flex items-center ${
+                  isActive(item.path)
+                    ? "text-teal-600"
+                    : "text-slate-500 dark:text-slate-400"
                 }`}
               >
+                {item.path === "/neuroshorts" && (
+                  <Zap size={14} className="mr-1 text-indigo-500" />
+                )}
                 {item.name}
               </Link>
             ))}
@@ -46,7 +51,6 @@ export default function Navbar() {
             </button>
           </nav>
 
-          {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
             <button
               className="p-2 rounded-md text-slate-500 hover:text-slate-700 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-700"
@@ -59,7 +63,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile navigation */}
       {isMenuOpen && (
         <div className="md:hidden border-t border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
           <div className="container mx-auto px-4 py-4 space-y-4">
@@ -68,10 +71,15 @@ export default function Navbar() {
                 key={item.path}
                 to={item.path}
                 className={`block text-sm font-medium transition-colors hover:text-teal-600 ${
-                  isActive(item.path) ? "text-teal-600" : "text-slate-500 dark:text-slate-400"
-                }`}
+                  isActive(item.path)
+                    ? "text-teal-600"
+                    : "text-slate-500 dark:text-slate-400"
+                } ${item.path === "/neuroshorts" ? "flex items-center" : ""}`}
                 onClick={() => setIsMenuOpen(false)}
               >
+                {item.path === "/neuroshorts" && (
+                  <Zap size={14} className="mr-1 text-indigo-500" />
+                )}
                 {item.name}
               </Link>
             ))}
@@ -86,5 +94,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
+  );
 }

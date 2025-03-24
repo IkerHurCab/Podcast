@@ -1,17 +1,20 @@
-import { Link } from "react-router-dom"
-import { Clock, Calendar } from 'lucide-react'
-import AudioPlayer from "./Audio-Player"
-import { episodes } from "../lib/data"
+import { Link } from "react-router-dom";
+import { Clock, Calendar } from "lucide-react";
+import { episodes } from "../lib/data";
+import { useAudio } from "../context/AudioContext";
 
 export default function FeaturedEpisode() {
-  // Get the latest episode
-  const featuredEpisode = episodes[0]
+  const featuredEpisode = episodes[0];
+  const { playEpisode } = useAudio();
 
   return (
     <section className="mb-16">
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-3xl font-bold">Último Episodio</h2>
-        <Link to="/episodes" className="text-teal-600 dark:text-teal-400 hover:underline">
+        <Link
+          to="/episodes"
+          className="text-teal-600 dark:text-teal-400 hover:underline"
+        >
           Ver todos los episodios
         </Link>
       </div>
@@ -24,7 +27,7 @@ export default function FeaturedEpisode() {
                 <img
                   src={featuredEpisode.image || "/placeholder.svg"}
                   alt={featuredEpisode.title}
-                  className="object-cover rounded-lg w-100 h-100"
+                  className="w-100 h-100 object-cover rounded-lg"
                 />
               </div>
             </div>
@@ -43,10 +46,17 @@ export default function FeaturedEpisode() {
 
               <h3 className="text-2xl font-bold">{featuredEpisode.title}</h3>
 
-              <p className="text-slate-500 dark:text-slate-400">{featuredEpisode.description}</p>
+              <p className="text-slate-500 dark:text-slate-400">
+                {featuredEpisode.description}
+              </p>
 
               <div className="pt-4">
-                <AudioPlayer audioSrc={featuredEpisode.audioSrc} />
+                <button
+                  onClick={() => playEpisode(featuredEpisode)}
+                  className="px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-md hover:from-teal-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 transition-all"
+                >
+                  Reproducir episodio
+                </button>
               </div>
 
               <div className="flex flex-wrap gap-2 pt-4">
@@ -64,5 +74,5 @@ export default function FeaturedEpisode() {
         </div>
       </div>
     </section>
-  )
+  );
 }

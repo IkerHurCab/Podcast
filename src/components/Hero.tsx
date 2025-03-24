@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { Brain, Lightbulb, Users } from 'lucide-react'
+import { Link } from "react-router-dom";
+import { Brain, Lightbulb, Users } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -8,12 +8,18 @@ export default function Hero() {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="flex justify-center mb-6">
           <div className="bg-gradient-to-r from-teal-100 to-cyan-100 dark:from-teal-900/30 dark:to-cyan-900/30 p-4 rounded-full">
-            <Brain size={48} className="text-gradient-to-r from-teal-500 to-cyan-500" />
+            <Brain
+              size={48}
+              className="text-gradient-to-r from-teal-500 to-cyan-500"
+            />
           </div>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">NeuroSynapse</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">
+          NeuroSynapse
+        </h1>
         <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-          Explicaciones simples sobre cómo funciona nuestra mente y cómo aplicarlo al día a día
+          Explicaciones simples sobre cómo funciona nuestra mente y cómo
+          aplicarlo al día a día
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
@@ -37,7 +43,8 @@ export default function Hero() {
             </div>
             <h3 className="text-xl font-bold mb-2">Episodios Semanales</h3>
             <p className="text-slate-500 dark:text-slate-400">
-              Nuevo contenido cada semana sobre neurociencia y psicología aplicada
+              Nuevo contenido cada semana sobre neurociencia y psicología
+              aplicada
             </p>
           </div>
 
@@ -46,7 +53,10 @@ export default function Hero() {
               <Users className="h-8 w-8 text-gradient-to-r from-teal-500 to-cyan-500" />
             </div>
             <h3 className="text-xl font-bold mb-2">Entrevistas con Expertos</h3>
-            <p className="text-slate-500 dark:text-slate-400">Aprende de psicólogos, neurocientíficos y especialistas en desarrollo personal</p>
+            <p className="text-slate-500 dark:text-slate-400">
+              Aprende de psicólogos, neurocientíficos y especialistas en
+              desarrollo personal
+            </p>
           </div>
 
           <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm border border-teal-100 dark:border-teal-900/30 hover:shadow-md transition-all">
@@ -55,11 +65,12 @@ export default function Hero() {
             </div>
             <h3 className="text-xl font-bold mb-2">Consejos Prácticos</h3>
             <p className="text-slate-500 dark:text-slate-400">
-              Técnicas y estrategias que puedes aplicar inmediatamente en tu vida diaria
+              Técnicas y estrategias que puedes aplicar inmediatamente en tu
+              vida diaria
             </p>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,0 +1,62 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="1.5">
+    <!-- Puntos neuronales -->
+    <circle cx="200" cy="150" r="6" fill="#ffffff" opacity="0.5"/>
+    <circle cx="350" cy="220" r="5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="500" cy="180" r="7" fill="#ffffff" opacity="0.5"/>
+    <circle cx="650" cy="300" r="6" fill="#ffffff" opacity="0.5"/>
+    <circle cx="800" cy="250" r="5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="950" cy="350" r="7" fill="#ffffff" opacity="0.5"/>
+    <circle cx="1100" cy="200" r="6" fill="#ffffff" opacity="0.5"/>
+    <circle cx="1250" cy="400" r="5" fill="#ffffff" opacity="0.5"/>
+    
+    <circle cx="150" cy="450" r="6" fill="#ffffff" opacity="0.5"/>
+    <circle cx="300" cy="500" r="5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="450" cy="550" r="7" fill="#ffffff" opacity="0.5"/>
+    <circle cx="600" cy="600" r="6" fill="#ffffff" opacity="0.5"/>
+    <circle cx="750" cy="650" r="5" fill="#ffffff" opacity="0.5"/>
+    <circle cx="900" cy="700" r="7" fill="#ffffff" opacity="0.5"/>
+    <circle cx="1050" cy="550" r="6" fill="#ffffff" opacity="0.5"/>
+    <circle cx="1200" cy="650" r="5" fill="#ffffff" opacity="0.5"/>
+    
+    <!-- Conexiones neuronales -->
+    <path d="M200,150 C250,170 300,200 350,220" />
+    <path d="M350,220 C400,230 450,200 500,180" />
+    <path d="M500,180 C550,220 600,270 650,300" />
+    <path d="M650,300 C700,290 750,270 800,250" />
+    <path d="M800,250 C850,280 900,320 950,350" />
+    <path d="M950,350 C1000,300 1050,250 1100,200" />
+    <path d="M1100,200 C1150,250 1200,350 1250,400" />
+    
+    <path d="M150,450 C200,460 250,480 300,500" />
+    <path d="M300,500 C350,520 400,540 450,550" />
+    <path d="M450,550 C500,570 550,590 600,600" />
+    <path d="M600,600 C650,620 700,640 750,650" />
+    <path d="M750,650 C800,670 850,690 900,700" />
+    <path d="M900,700 C950,650 1000,600 1050,550" />
+    <path d="M1050,550 C1100,580 1150,620 1200,650" />
+    
+    <!-- Conexiones cruzadas -->
+    <path d="M200,150 C250,250 350,350 450,550" />
+    <path d="M350,220 C400,350 500,450 600,600" />
+    <path d="M500,180 C550,300 650,450 750,650" />
+    <path d="M650,300 C700,400 800,500 900,700" />
+    <path d="M800,250 C850,350 950,450 1050,550" />
+    <path d="M950,350 C1000,450 1100,550 1200,650" />
+    
+    <path d="M150,450 C200,350 250,250 300,220" />
+    <path d="M300,500 C350,400 400,300 500,180" />
+    <path d="M450,550 C500,450 550,350 650,300" />
+    <path d="M600,600 C650,500 700,400 800,250" />
+    <path d="M750,650 C800,550 850,450 950,350" />
+    <path d="M900,700 C950,600 1000,500 1100,200" />
+    <path d="M1050,550 C1100,450 1150,350 1250,400" />
+  </g>
+</svg>
+
