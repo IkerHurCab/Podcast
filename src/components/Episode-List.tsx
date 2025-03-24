@@ -1,31 +1,34 @@
 import { Link } from "react-router-dom"
-import { Clock, Calendar } from "lucide-react"
+import { Clock, Calendar } from 'lucide-react'
 import { episodes } from "../lib/data"
 
 export default function EpisodeList() {
-  // Skip the first episode (featured) and show the next 3
   const recentEpisodes = episodes.slice(1, 4)
 
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-bold mb-8">Recent Episodes</h2>
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-3xl font-bold">Episodios Recientes</h2>
+        <Link to="/episodes" className="text-teal-600 dark:text-teal-400 hover:underline">
+          Ver todos los episodios
+        </Link>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {recentEpisodes.map((episode) => (
-          <div
-            key={episode.id}
-            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md flex flex-col"
+          <div 
+            key={episode.id} 
+            className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md border border-teal-100 dark:border-teal-900/30 hover:shadow-lg transition-all flex flex-col"
           >
-            <div className="aspect-video bg-purple-100 dark:bg-purple-900/30">
+            <div className="aspect-video bg-gradient-to-br from-teal-100 to-cyan-100 dark:from-teal-900/30 dark:to-cyan-900/30 flex items-center justify-center overflow-hidden">
               <img
                 src={episode.image || "/placeholder.svg"}
                 alt={episode.title}
-                className="w-full h-full object-cover"
+                className="w-50 h-50 object-cover"
               />
             </div>
-
-            <div className="p-6 flex-grow flex flex-col">
-              <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm space-x-4 mb-2">
+            <div className="p-5 flex-1 flex flex-col">
+              <div className="flex items-center text-slate-500 dark:text-slate-400 text-sm space-x-4 mb-2">
                 <div className="flex items-center">
                   <Calendar size={14} className="mr-1" />
                   <span>{episode.date}</span>
@@ -35,33 +38,22 @@ export default function EpisodeList() {
                   <span>{episode.duration}</span>
                 </div>
               </div>
-
               <h3 className="text-xl font-bold mb-2">{episode.title}</h3>
-
-              <p className="text-gray-500 dark:text-gray-400 text-sm mb-4 flex-grow">
-                {episode.description.length > 120 ? `${episode.description.substring(0, 120)}...` : episode.description}
+              <p className="text-slate-500 dark:text-slate-400 text-sm mb-4 flex-1">
+                {episode.description.length > 120
+                  ? `${episode.description.substring(0, 120)}...`
+                  : episode.description}
               </p>
-
               <Link
                 to={`/episodes#${episode.id}`}
-                className="w-full px-4 py-2 border border-purple-600 text-purple-600 dark:text-purple-400 dark:border-purple-400 text-center rounded-md hover:bg-purple-50 dark:hover:bg-purple-900/20 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                className="text-teal-600 dark:text-teal-400 hover:underline text-sm font-medium"
               >
-                Listen to Episode
+                Escuchar episodio →
               </Link>
             </div>
           </div>
         ))}
       </div>
-
-      <div className="mt-8 text-center">
-        <Link
-          to="/episodes"
-          className="px-6 py-2 border border-purple-600 text-purple-600 dark:text-purple-400 dark:border-purple-400 rounded-md hover:bg-purple-50 dark:hover:bg-purple-900/20 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-        >
-          View All Episodes
-        </Link>
-      </div>
     </section>
   )
 }
-

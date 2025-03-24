@@ -1,48 +1,69 @@
 export const episodes = [
-    {
-      id: "ep-001",
-      title: "The Future of React: What's Coming in React 19",
-      date: "March 15, 2025",
-      duration: "45 min",
-      description:
-        "In this episode, we dive deep into the upcoming features of React 19. We discuss the new compiler, server components, and how these changes will affect your development workflow. Plus, tips on how to prepare your codebase for the upgrade.",
-      audioSrc: "/placeholder.mp3",
-      image: "/placeholder.svg?height=400&width=400",
-      tags: ["React", "JavaScript", "Frontend"],
-    },
-    {
-      id: "ep-002",
-      title: "Building Accessible Web Applications",
-      date: "March 8, 2025",
-      duration: "38 min",
-      description:
-        "Accessibility is not just a nice-to-have, it's essential. In this episode, we talk with accessibility expert Sarah Johnson about common pitfalls and practical strategies to make your web applications more inclusive.",
-      audioSrc: "/placeholder.mp3",
-      image: "/placeholder.svg?height=400&width=400",
-      tags: ["Accessibility", "UX", "HTML"],
-    },
-    {
-      id: "ep-003",
-      title: "The State of CSS in 2025",
-      date: "March 1, 2025",
-      duration: "42 min",
-      description:
-        "CSS has evolved dramatically in recent years. We explore the latest features like container queries, cascade layers, and the new color functions. Learn how these tools can simplify your styling workflow and enable new design possibilities.",
-      audioSrc: "/placeholder.mp3",
-      image: "/placeholder.svg?height=400&width=400",
-      tags: ["CSS", "Design", "Frontend"],
-    },
-    {
-      id: "ep-004",
-      title: "TypeScript Best Practices with Industry Experts",
-      date: "February 22, 2025",
-      duration: "51 min",
-      description:
-        "TypeScript continues to gain adoption across the JavaScript ecosystem. In this roundtable discussion, we bring together three TypeScript experts to share their best practices, favorite patterns, and tips for maintaining large TypeScript codebases.",
-      audioSrc: "/placeholder.mp3",
-      image: "/placeholder.svg?height=400&width=400",
-      tags: ["TypeScript", "JavaScript", "Best Practices"],
-    },
-  ]
-  
-  
+  {
+    id: "ep1",
+    title: "Por qué procrastinamos y cómo dejar de hacerlo",
+    date: "24 Mar 2025",
+    duration: "42 min",
+    description:
+      "Descubre las causas de la procrastinación y aprende métodos efectivos para superarla.",
+    audioSrc: "/episodes/ep1.mp3",
+    image: "/brain.png",
+    tags: ["Neurociencia", "Aprendizaje", "Desarrollo Personal"],
+  },
+  {
+    id: "ep2",
+    title: "El poder de los hábitos atómicos",
+    date: "17 Mar 2025",
+    duration: "38 min",
+    description:
+      "Explora cómo pequeños cambios diarios pueden generar transformaciones duraderas en tu vida.",
+    audioSrc: "/episodes/ep2.mp3",
+    image: "/brain.png",
+    tags: ["Hábitos", "Productividad", "Psicología"],
+  },
+  {
+    id: "ep3",
+    title: "Inteligencia emocional en el trabajo",
+    date: "10 Mar 2025",
+    duration: "45 min",
+    description:
+      "Aprende a gestionar tus emociones para mejorar la comunicación y el bienestar laboral.",
+    audioSrc: "/episodes/ep3.mp3",
+    image: "/brain.png",
+    tags: ["Emociones", "Trabajo", "Liderazgo"],
+  },
+  {
+    id: "ep4",
+    title: "Mindfulness: Atención plena para una vida consciente",
+    date: "3 Mar 2025",
+    duration: "36 min",
+    description:
+      "Descubre técnicas de atención plena para reducir la ansiedad y aumentar tu concentración diaria.",
+    audioSrc: "/episodes/ep4.mp3",
+    image: "/brain.png",
+    tags: ["Mindfulness", "Meditación", "Bienestar"],
+  },
+  {
+    id: "ep5",
+    title: "El cerebro adolescente: Guía para padres",
+    date: "24 Feb 2025",
+    duration: "50 min",
+    description:
+      "Entiende los procesos cerebrales de la adolescencia y cómo facilitar una mejor comunicación familiar.",
+    audioSrc: "/episodes/ep5.mp3",
+    image: "/brain.png",
+    tags: ["Adolescencia", "Crianza", "Desarrollo"],
+  },
+  {
+    id: "ep6",
+    title: "Sueño y memoria: Por qué dormir bien es crucial",
+    date: "17 Feb 2025",
+    duration: "41 min",
+    description:
+      "Analiza cómo el descanso reparador influye en la memoria y descubre consejos para mejorar tu sueño.",
+    audioSrc: "/episodes/ep6.mp3",
+    image: "/brain.png",
+    tags: ["Sueño", "Memoria", "Salud"],
+  },
+];
+
