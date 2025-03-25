@@ -3,7 +3,7 @@ export const episodes = [
     id: "ep1",
     title: "Por qué procrastinamos y cómo dejar de hacerlo",
     date: "24 Mar 2025",
-    duration: "42 min",
+    duration: "21 min",
     description:
       "Descubre las causas de la procrastinación y aprende métodos efectivos para superarla.",
     audioSrc: "/episodes/ep1.mp3",
